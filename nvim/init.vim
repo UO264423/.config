@@ -8,7 +8,7 @@
 :set mouse=a
 
 
-call plug#begin()
+call plug#begin() 
 
 
 	Plug 'https://github.com/preservim/nerdtree' "Arbol de ficheros 
@@ -42,20 +42,23 @@ call plug#begin()
 
 	"Snippets
 	Plug 'https://github.com/honza/vim-snippets'
-
-
+	
+	"Surround
+	Plug 'https://github.com/tpope/vim-surround'
 	"Temas 
 	"Plug 'kyoz/purify', { 'rtp': 'vim'  }
 	Plug 'https://github.com/morhetz/gruvbox'
-
+	Plug 'https://github.com/colepeters/spacemacs-theme.vim'
 
 
 
 call plug#end()
 
 set termguicolors  " Activa true colors en la terminal
-colorscheme gruvbox  " Activa tema onedark
-
+"colorscheme gruvbox  " Activa grubvox
+"Spacemacs theme
+set background=dark
+colorscheme spacemacs-theme
 
 
 
@@ -77,6 +80,11 @@ nmap <silent> <F10> <Plug>(coc-definition)
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
+nnoremap <Leader>W :w<CR>
+nnoremap <Leader>Q :q<CR>
+
+
+
 nmap <F5> :bnext<CR>
 nmap <F3> :bprev<CR>
 nmap <F4> :bd<CR>
@@ -91,7 +99,8 @@ nnoremap <C-y> :lat<CR>
 nnoremap <Leader>rf <Plug>
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
-
+"Replace
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
 
 
 
