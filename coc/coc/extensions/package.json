@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "coc-java": ">=1.5.5",
-    "coc-prettier": ">=9.3.0",
-    "coc-snippets": ">=3.0.9",
-    "coc-solargraph": ">=1.2.4"
-  }
-}

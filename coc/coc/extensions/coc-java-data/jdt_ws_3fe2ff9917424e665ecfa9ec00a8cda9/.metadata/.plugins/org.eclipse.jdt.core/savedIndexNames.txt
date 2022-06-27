@@ -1,7 +1,0 @@
-INDEX VERSION 1.131+/home/lukz/.config/coc/extensions/coc-java-data/jdt_ws_3fe2ff9917424e665ecfa9ec00a8cda9/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-2949097923.index
-2824214148.index
-3534667285.index
-3842426239.index
-1692203219.index
