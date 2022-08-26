@@ -9,7 +9,7 @@
 call plug#begin() 
 
 	
-	Plug 'https://github.com/tpope/vim-fugitive' "Poder mover archivos 
+	"Plug 'https://github.com/tpope/vim-fugitive' "Poder mover archivos 
 
 	Plug 'https://github.com/preservim/nerdtree' "Arbol de ficheros 
 
@@ -26,6 +26,9 @@ call plug#begin()
 	Plug 'https://github.com/KabbAmine/vCoolor.vim'
 
 	Plug 'NLKNguyen/papercolor-theme'
+
+	Plug 'https://github.com/justinmk/vim-sneak'
+
 
 	Plug 'https://github.com/ryanoasis/vim-devicons' "Iconos de dev
 	Plug 'https://github.com/tc50cal/vim-terminal' "Terminal de comandos
@@ -61,6 +64,7 @@ call plug#begin()
 	Plug 'https://github.com/colepeters/spacemacs-theme.vim'
 	Plug 'chriskempson/base16-vim'
 
+	Plug 'Mofiqul/vscode.nvim'
 
 
 call plug#end()
@@ -70,9 +74,10 @@ set termguicolors  " Activa true colors en la terminal
 "Spacemacs theme
 set background=dark
 "colorscheme spacemacs-theme
-colorscheme PaperColor
+"colorscheme PaperColor
 "colorscheme gruvbox
 "colorscheme base16-default-dark
+colorscheme vscode
 
 let mapleader = "\ "
 
