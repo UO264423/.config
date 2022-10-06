@@ -66,6 +66,9 @@ call plug#begin()
 
 	Plug 'Mofiqul/vscode.nvim'
 
+	Plug 'frazrepo/vim-rainbow'
+
+	Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 
 call plug#end()
 
@@ -85,13 +88,16 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
 let g:coc_global_extensions = ['coc-solargraph']
+
+let g:rainbow_active = 1
+
 let g:airline#extensions#tabline#enabled = 1
 
 
 " relative path
 :nmap cp :let @+ = expand("%")<CR>
 
-
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 nmap <F8> :TagbarToggle<CR>
 nmap <silent> <F10> <Plug>(coc-definition) 
@@ -225,11 +231,6 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
